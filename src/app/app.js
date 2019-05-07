@@ -1,7 +1,4 @@
-import React from 'react'
+import { createElement } from 'react';
+import { AppView } from './app-view';
 
-export const App = () => (
-  <>
-    <h2>Hello world!</h2>
-  </>
-);
+export const App = () => createElement(AppView);
