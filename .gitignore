@@ -1,0 +1,13 @@
+# See https://git-scm.com/docs/gitignore
+
+# dependencies
+node_modules
+
+# production
+/dist
+
+# cache
+/.cache
+
+# misc
+.idea
