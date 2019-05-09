@@ -3,6 +3,7 @@
 import { createElement } from 'react';
 import { AppView } from './app-view';
 
+// React Hot Loader
 let hotReload = App => App;
 
 // PR to fix: https://github.com/gaearon/react-hot-loader/pull/1244

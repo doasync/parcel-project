@@ -1,4 +1,11 @@
 module.exports = {
-  presets: ['env', 'react', 'flow'],
-  plugins: ['react-hot-loader/babel'],
+  presets: [
+    '@babel/preset-env',
+    '@babel/preset-react',
+    '@babel/preset-flow',
+  ],
+  plugins: [
+    '@babel/plugin-syntax-dynamic-import',
+    'react-hot-loader/babel',
+  ],
 };

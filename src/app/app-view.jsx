@@ -5,7 +5,7 @@ import { Counter } from './counter';
 
 export const AppView = () => (
   <h1>
-    Hello, world!
+    Hello world!
     <br />
     <Counter />
   </h1>
