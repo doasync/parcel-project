@@ -1,6 +1,6 @@
 {
   "name": "parcel-project",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "doasync",
   "description": "Create a project with Parcel, Babel 7, React, Flow, ESLint, Prettier, Jest",
   "main": "index.js",
