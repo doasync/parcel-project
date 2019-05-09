@@ -7,7 +7,7 @@ type Props = {|
   increment: () => void,
 |};
 
-export const CounterView = ({ counter, increment }: Props) => (
+export const CounterViews = ({ counter, increment }: Props) => (
   <>
     <div>
       Counter:

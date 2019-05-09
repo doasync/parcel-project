@@ -1,7 +1,7 @@
 // @flow strict
 
 import React from 'react';
-import { Counter } from './counter';
+import { Counter } from '../features/counter';
 
 export const AppView = () => (
   <h1>

@@ -3,7 +3,7 @@
 import {
   createElement, useState, useEffect, useRef,
 } from 'react';
-import { CounterView } from './counter-view';
+import { CounterViews } from './counter-view';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef(() => {});
@@ -34,7 +34,7 @@ export const Counter = () => {
     setCounter(counter + 1);
   }, 1000);
 
-  return createElement(CounterView, {
+  return createElement(CounterViews, {
     counter,
     increment: () => setCounter(counter + 1),
   });

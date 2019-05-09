@@ -6,7 +6,7 @@ module.exports = {
     es6: true,
   },
   extends: ['airbnb', 'plugin:flowtype/recommended'],
-  plugins: ['react-hooks', 'flowtype'],
+  plugins: ['react-hooks', 'flowtype', 'filenames'],
   settings: {
     flowtype: {
       onlyFilesWithFlowAnnotation: true
@@ -44,5 +44,7 @@ module.exports = {
         ignoreRegExpLiterals: true,
       },
     ],
+    'filenames/match-exported': ['error', 'kebab'],
+    'filenames/match-regex': ['error', '^[a-z]+(?:-[a-z]+)*(?:\.[a-z]+)*$', false],
   },
 };
