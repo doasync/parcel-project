@@ -4,8 +4,18 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ['airbnb'],
-  plugins: ['react-hooks'],
+  extends: ['airbnb', 'plugin:flowtype/recommended'],
+  plugins: ['react-hooks', 'flowtype'],
+  settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true
+    }
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   rules: {
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
@@ -33,10 +43,5 @@ module.exports = {
         ignoreRegExpLiterals: true,
       },
     ],
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
 };

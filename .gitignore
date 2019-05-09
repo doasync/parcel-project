@@ -10,4 +10,4 @@ node_modules
 /.cache
 
 # misc
-.idea
+/.idea

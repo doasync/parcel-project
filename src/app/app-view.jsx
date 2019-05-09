@@ -1,7 +1,12 @@
+// @flow strict
+
 import React from 'react';
+import { Counter } from './counter';
 
 export const AppView = () => (
-  <>
-    <h2>Hello world!</h2>
-  </>
+  <h1>
+    Hello, world!!
+    <br />
+    <Counter />
+  </h1>
 );
