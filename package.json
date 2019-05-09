@@ -5,6 +5,10 @@
   "description": "Create a project with Parcel, Babel 7, React, Flow, ESLint, Prettier, Jest",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/doasync/parcel-project.git"
+  },
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
