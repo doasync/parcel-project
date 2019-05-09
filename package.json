@@ -34,5 +34,14 @@
     "lint": "eslint .",
     "start": "NODE_ENV=development parcel src/index.html --open",
     "build": "NODE_ENV=production parcel build dist/index.html --public-url ./"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 67",
+    "Firefox >= 64",
+    "Safari >= 11.1",
+    "iOS >= 11.4",
+    "Opera >= 57",
+    "Edge >= 17",
+    "ChromeAndroid >= 71"
+  ]
 }
