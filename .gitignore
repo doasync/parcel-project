@@ -9,5 +9,8 @@ node_modules
 # cache
 /.cache
 
+# coverage
+/coverage
+
 # misc
 /.idea

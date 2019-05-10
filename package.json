@@ -12,8 +12,12 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
+    "test-watch": "jest --watch",
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "build-info": "yarn build && ",
+    "jest-coverage": "scripts/jest-coverage.sh",
+    "flow-coverage": "scripts/flow-coverage.sh"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -34,6 +38,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "flow-bin": "^0.98.1",
     "flow-typed": "^2.5.1",
+    "http-server": "0.11.1",
     "jest": "^24.8.0",
     "jest-dom": "^3.2.2",
     "parcel-bundler": "^1.12.3",
