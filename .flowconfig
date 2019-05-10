@@ -1,4 +1,5 @@
 [ignore]
+<PROJECT_ROOT>/.temp
 <PROJECT_ROOT>/.idea
 <PROJECT_ROOT>/.cache
 <PROJECT_ROOT>/dist

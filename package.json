@@ -15,9 +15,7 @@
     "test-watch": "jest --watch",
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
-    "build-info": "yarn build && ",
-    "jest-coverage": "scripts/jest-coverage.sh",
-    "flow-coverage": "scripts/flow-coverage.sh"
+    "commands": "make usage"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
