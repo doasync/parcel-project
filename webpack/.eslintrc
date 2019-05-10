@@ -1,0 +1,11 @@
+{
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "strict": "off",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }]
+  }
+}

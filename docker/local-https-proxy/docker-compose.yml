@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nginx:
+    image: local-https-proxy-nginx
+    container_name: local-https-proxy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    ports:
+      - 443:443
+    volumes:
+      - ./ssl:/etc/nginx/ssl

@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  node:
+    labels:
+      required.env.vars: |-
+        ${USER_ID:?USER_ID}
+        ${GROUP_ID:?GROUP_ID}
+        ${COMPOSE_PROJECT_NAME:?COMPOSE_PROJECT_NAME}
+    env_file:
+      - .env
+    image: ${COMPOSE_PROJECT_NAME}-node
+    container_name: ${COMPOSE_PROJECT_NAME}-runtime
+    user: ${USER_ID}:${GROUP_ID}
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - 8888:8888
+      - 8000:8000
+    volumes:
+      - ./:/var/www/html/
+  nginx:
+    labels:
+      required.env.vars: |-
+        ${COMPOSE_PROJECT_NAME:?COMPOSE_PROJECT_NAME}
+    env_file:
+      - .env
+    image: ${COMPOSE_PROJECT_NAME}-nginx
+    container_name: ${COMPOSE_PROJECT_NAME}-server
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - 80:80

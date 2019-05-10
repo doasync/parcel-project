@@ -32,6 +32,11 @@ module.exports = {
       'WithStatement',
       "BinaryExpression[operator='in']",
     ],
+    'space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'always', // use space
+      asyncArrow: 'always',
+    }],
     'react-hooks/rules-of-hooks': 'error',
     'react/require-default-props': 'off', // optional props without defaults
     'react/forbid-prop-types': 'warn',

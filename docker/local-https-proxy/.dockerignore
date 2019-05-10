@@ -1,0 +1,6 @@
+/ssl
+/.idea
+/.vscode
+.env
+.git
+.gitignore
