@@ -1,16 +1,20 @@
 module.exports = {
   parser: 'babel-eslint',
   env: {
-    jest: true,
-    browser: true,
     es6: true,
+    browser: true,
+    node: true,
+    jest: true,
   },
   extends: ['airbnb', 'plugin:flowtype/recommended'],
   plugins: ['react-hooks', 'flowtype', 'filenames'],
   settings: {
+    'import/resolver': {
+      'babel-module': {},
+    },
     flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    }
+      onlyFilesWithFlowAnnotation: true,
+    },
   },
   parserOptions: {
     ecmaFeatures: {
@@ -45,6 +49,10 @@ module.exports = {
       },
     ],
     'filenames/match-exported': ['error', 'kebab'],
-    'filenames/match-regex': ['error', '^[a-z]+(?:-[a-z]+)*(?:\.[a-z]+)*$', false],
+    'filenames/match-regex': [
+      'error',
+      '^[a-z]+(?:-[a-z]+)*(?:.[a-z]+)*$',
+      false,
+    ],
   },
 };

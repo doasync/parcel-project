@@ -31,7 +31,7 @@ serve:
 
 .PHONY: build-info
 build-info:
-	@yarn build
+	@yarn build --no-source-maps
 	@mkdir -p .temp/bundle-analyzer
 	@cp dist/report.html .temp/bundle-analyzer/index.html
 	@make --no-print-directory serve .temp/bundle-analyzer
