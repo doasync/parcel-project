@@ -1,4 +1,4 @@
-// @flow strict
+// @flow
 
 // Entry point
 
@@ -17,4 +17,6 @@ const renderApp = () => {
 renderApp();
 
 // Hot reloading
-module.hot.accept(renderApp);
+if (module.hot) {
+  module.hot.accept(renderApp);
+}

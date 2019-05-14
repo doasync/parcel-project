@@ -1,12 +1,13 @@
-// @flow strict
+import * as React from 'react';
+import { Normalize } from 'styled-normalize';
+import { Root } from './root';
 
-import React from 'react';
-import { Counter } from '~/features/counter';
+import '../fonts/stylesheet.css';
 
+// App providers
 export const AppView = () => (
-  <h1>
-    Hello world!
-    <br />
-    <Counter />
-  </h1>
+  <>
+    <Normalize />
+    <Root />
+  </>
 );

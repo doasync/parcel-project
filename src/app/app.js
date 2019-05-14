@@ -1,15 +1,5 @@
-// @flow strict
-
 import { createElement } from 'react';
 import { AppView } from './app-view';
+import { hotLoader } from './hot-loader';
 
-// React Hot Loader
-let hotReload = App => App;
-
-// PR to fix: https://github.com/gaearon/react-hot-loader/pull/1244
-if (process.env.NODE_ENV === 'development') {
-  // eslint-disable-next-line global-require
-  hotReload = require('react-hot-loader').hot(module);
-}
-
-export const App = hotReload(() => createElement(AppView));
+export const App = hotLoader(() => createElement(AppView));
