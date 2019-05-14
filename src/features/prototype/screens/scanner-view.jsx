@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Device, Flex, Radar, ScreenBase,
 } from '../ui';
-import { LinkButton } from '../ui/buttons/link-button';
+import { LinkButton } from '../ui/link-button';
 
 export const ScannerView = ({ devices, quit, connectDevice }) => (
   <ScreenBase>
