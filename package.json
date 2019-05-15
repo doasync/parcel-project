@@ -15,6 +15,7 @@
     "lint-css": "stylelint '+(**/*.css|**/*.js)'",
     "test": "jest",
     "test-watch": "jest --watch",
+    "prestart": "rimraf .cache",
     "start": "parcel src/index.html --open --no-cache",
     "prebuild": "rimraf dist",
     "build": "parcel build src/index.html",
