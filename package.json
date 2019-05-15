@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "test": "jest",
     "test-watch": "jest --watch",
-    "start": "parcel src/index.html --open",
+    "start": "parcel src/index.html --open --no-cache",
     "build": "parcel build src/index.html",
     "more": "make usage"
   },

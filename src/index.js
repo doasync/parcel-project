@@ -1,3 +1,5 @@
+// @flow
+
 // Entry point
 
 import { createElement } from 'react';

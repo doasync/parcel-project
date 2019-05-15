@@ -1,3 +1,5 @@
+// @flow
+
 import { createElement } from 'react';
 import { render } from 'react-testing-library';
 import { App } from './app';
