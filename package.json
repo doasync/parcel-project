@@ -17,6 +17,15 @@
     "build": "parcel build src/index.html",
     "more": "make usage"
   },
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
+    "core-js": "^3.0.1",
+    "react": "^16.8.6",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-hot-loader": "^4.8.4",
+    "styled-components": "^4.2.0",
+    "styled-normalize": "^8.0.6"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
@@ -26,6 +35,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.2.0",
@@ -41,22 +51,15 @@
     "http-server": "0.11.1",
     "jest": "^24.8.0",
     "jest-dom": "^3.2.2",
+    "jest-styled-components": "^6.3.1",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "prettier": "^1.17.0",
-    "react-testing-library": "^7.0.0"
-  },
-  "dependencies": {
-    "@hot-loader/react-dom": "^16.8.6",
-    "core-js": "^3.0.1",
-    "effector": "^0.18.6",
-    "effector-react": "^0.18.9",
-    "invariant": "^2.2.4",
-    "react": "^16.8.0",
-    "react-dom": "npm:@hot-loader/react-dom",
-    "react-hot-loader": "^4.8.4",
-    "styled-components": "^4.0.0",
-    "styled-normalize": "^8.0.6"
+    "react-testing-library": "^7.0.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.7.0"
   },
   "browserslist": [
     "Chrome >= 67",

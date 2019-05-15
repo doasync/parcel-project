@@ -19,7 +19,9 @@ $(eval $(ARGS):;@:)
 usage:
 	@printf "\n\033[0;1mmake\033[m [command] ...\n\n$(GREEN)Commands:$(NO_COLOR)\n\n" ;
 	@printf "  $(CYAN)serve [folder]$(NO_COLOR)  serve files in folder and open browser window \n";
-	@printf "  $(CYAN)build-info $(NO_COLOR)     build src and open bundle analyzer \n";
+	@printf "  $(CYAN)build-info $(NO_COLOR)     build src and open bundle analyzer in browser \n";
+	@printf "  $(CYAN)jest-coverage $(NO_COLOR)  get jest coverage and show report in browser \n";
+	@printf "  $(CYAN)flow-coverage $(NO_COLOR)  get flow coverage and show report in browser \n";
 	@printf "\n" ;
 
 .SILENT:
@@ -29,12 +31,17 @@ serve:
 	$(eval path = $(firstword $(ARGS)))
 	@yarn http-server -gos -c-1 $(ARGS) >> /dev/null 2>&1
 
+.PHONY: build-open
+build-open:
+	@yarn build --no-source-maps --out-dir .temp/temp-dist
+	@make --no-print-directory serve .temp/temp-dist
+
 .PHONY: build-info
 build-info:
 	@yarn build --no-source-maps
-	@mkdir -p .temp/bundle-analyzer
-	@cp dist/report.html .temp/bundle-analyzer/index.html
-	@make --no-print-directory serve .temp/bundle-analyzer
+	@mkdir -p .temp/bundle-report
+	@cp dist/report.html .temp/bundle-report/index.html
+	@make --no-print-directory serve .temp/bundle-report
 
 .PHONY: flow-coverage
 flow-coverage:

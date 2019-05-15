@@ -9,6 +9,7 @@ module.exports = {
     '@babel/preset-flow',
   ],
   plugins: [
+    ['babel-plugin-styled-components', { pure: true }],
     ['module-resolver', { alias }],
     '@babel/plugin-syntax-dynamic-import',
     'react-hot-loader/babel',
