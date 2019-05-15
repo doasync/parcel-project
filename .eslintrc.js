@@ -6,7 +6,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['airbnb', 'plugin:flowtype/recommended'],
+  extends: ['airbnb', 'plugin:flowtype/recommended', 'prettier'],
   plugins: ['react-hooks', 'flowtype', 'filenames'],
   settings: {
     'import/resolver': {
