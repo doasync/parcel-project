@@ -10,10 +10,13 @@
     "url": "git://github.com/doasync/parcel-project.git"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "npm run lint-js && npm run lint-css",
+    "lint-js": "eslint .",
+    "lint-css": "stylelint '+(**/*.css|**/*.js)'",
     "test": "jest",
     "test-watch": "jest --watch",
     "start": "parcel src/index.html --open --no-cache",
+    "prebuild": "rimraf dist",
     "build": "parcel build src/index.html",
     "more": "make usage"
   },
@@ -56,6 +59,7 @@
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "prettier": "^1.17.0",
     "react-testing-library": "^7.0.0",
+    "rimraf": "^2.6.3",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-config-styled-components": "^0.1.1",
