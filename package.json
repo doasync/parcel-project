@@ -2,7 +2,7 @@
   "name": "parcel-project",
   "version": "0.1.0",
   "author": "doasync",
-  "description": "Create a project with Parcel, Babel 7, React, Flow, ESLint, Prettier, Jest",
+  "description": "Create a project with Parcel, Babel 7, React, Flow, Linters, Jest",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "npm run lint-js && npm run lint-css",
     "lint-js": "eslint .",
-    "lint-css": "stylelint '+(**/*.css|**/*.js)'",
+    "lint-css": "stylelint '+(**/*.css|**/*.scss|**/*.js|**/*.html)'",
     "test": "jest",
     "test-watch": "jest --watch",
     "prestart": "rimraf .cache",
