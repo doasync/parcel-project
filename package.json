@@ -19,7 +19,9 @@
     "start": "parcel src/index.html --open --no-cache",
     "prebuild": "rimraf dist",
     "build": "parcel build src/index.html",
-    "more": "make usage"
+    "more": "make usage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
@@ -78,7 +80,12 @@
     "stylelint-config-prettier": "^5.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.7.0"
+    "stylelint-processor-styled-components": "^1.7.0",
+    "@storybook/react": "^5.0.11",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "babel-loader": "^8.0.6"
   },
   "browserslist": [
     "Chrome >= 67",

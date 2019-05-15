@@ -22,6 +22,16 @@ module.exports = {
     },
   },
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          'src/**/stories.jsx',
+          'src/**/*.stories.jsx',
+          'src/**/*.test.js',
+        ],
+      },
+    ],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'no-plusplus': ['off', { allowForLoopAfterthoughts: true }],
