@@ -3,10 +3,11 @@ const alias = {
 };
 
 module.exports = {
+  // prettier-ignore
   presets: [
     '@babel/preset-env',
     '@babel/preset-react',
-    '@babel/preset-flow',
+    '@babel/preset-flow'
   ],
   plugins: [
     ['babel-plugin-styled-components', { pure: true }],
